@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "lastname": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "pluginOptions": {}
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 15,
+      "minLength": 5,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

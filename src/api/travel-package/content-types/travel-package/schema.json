@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travel_packages",
+  "info": {
+    "singularName": "travel-package",
+    "pluralName": "travel-packages",
+    "displayName": "Travel Package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "maxLength": 500
+    }
+  }
+}
