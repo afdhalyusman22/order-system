@@ -24,7 +24,7 @@
     "deliveryDate": {
       "type": "datetime"
     },
-    "customer_id": {
+    "customers": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::customer.customer"
