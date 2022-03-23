@@ -20,14 +20,23 @@ module.exports = createCoreController('api::customer.customer', ({
     } = ctx;
 
     const entity = await strapi.db.query('api::customer.customer').findOne({
-      select: ['firstname', 'lastname'],
+      select: ['id','firstname', 'lastname','phone','address'],
       where: {
         id: id
       }
     });
-    // const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
-
-    // return this.transformResponse(sanitizedEntity);
     return entity;
+  },
+  async createCustom(ctx) {
+    let body = ctx.request.body;
+    console.log(body)
+    const entry = await strapi.entityService.create('api::customer.customer', {
+      data: {
+        firstname: body.firstname,
+        phone: body.phone,
+        address: body.address
+      },
+    });
+    return entry;
   }
 }));

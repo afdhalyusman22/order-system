@@ -22,7 +22,8 @@ module.exports = {
       fields: ['name', 'description'],
       populate: {
         files: true
-      }
+      },
+      sort: { id: 'desc' },
     });
     return entry;
   },

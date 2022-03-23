@@ -24,9 +24,6 @@ module.exports = {
         address: body.address
       },
     });
-
     return entry;
-
-
   }
 };

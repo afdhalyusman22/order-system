@@ -12,8 +12,8 @@ module.exports = {
         customers: {
           fields: ['firstname', 'lastname'],
         },
-        travel_packages:{
-            fields: ['name','description']
+        travel_packages: {
+          fields: ['name', 'description']
         }
       },
     });
@@ -26,12 +26,11 @@ module.exports = {
         customers: {
           fields: ['firstname', 'lastname'],
         },
-        travel_packages:{
-            fields: ['name','description']
+        travel_packages: {
+          fields: ['name', 'description']
         }
       },
-      start: 0,
-      limit: 1,
+      sort: { id: 'desc' },
     });
     return entry;
   },
