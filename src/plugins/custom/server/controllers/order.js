@@ -7,13 +7,16 @@ module.exports = {
     } = ctx.params;
 
     const entry = await strapi.entityService.findOne('api::order.order', id, {
-      fields: ['orderId', 'orderDate'],
+      fields: ['orderId', 'orderDate','remark'],
       populate: {
         customers: {
           fields: ['firstname', 'lastname'],
         },
-        travel_packages: {
+        travel_package: {
           fields: ['name', 'description']
+        },
+        status:{
+          fields : ['name']
         }
       },
     });
@@ -21,13 +24,16 @@ module.exports = {
   },
   async findAll(ctx) {
     const entry = await strapi.entityService.findMany('api::order.order', {
-      fields: ['orderId', 'orderDate'],
+      fields: ['orderId', 'orderDate','remark'],
       populate: {
         customers: {
           fields: ['firstname', 'lastname'],
         },
-        travel_packages: {
+        travel_package: {
           fields: ['name', 'description']
+        },
+        status:{
+          fields : ['name']
         }
       },
       sort: { id: 'desc' },

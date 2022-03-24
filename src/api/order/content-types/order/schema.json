@@ -4,7 +4,7 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "order",
+    "displayName": "Order",
     "description": ""
   },
   "options": {
@@ -29,10 +29,18 @@
       "relation": "oneToOne",
       "target": "api::customer.customer"
     },
-    "travel_packages": {
+    "travel_package": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::travel-package.travel-package"
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status.status"
+    },
+    "remark": {
+      "type": "string"
     }
   }
 }
